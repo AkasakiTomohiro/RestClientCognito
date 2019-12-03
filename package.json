@@ -1,7 +1,8 @@
 {
   "name": "rest-client-cognito",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Cognito Simple Authentication Server",
+  "main": "lib/index.js",
   "scripts": {
     "LintStaged": "lint-staged",
     "CodeStyleCheck": "gts check",
@@ -16,9 +17,12 @@
   "bin": {
     "rcc": "bin/rcc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "Cognito",
+    "REST Client"
+  ],
+  "author": "Akasaki",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AkasakiTomohiro/RestClientCognito/issues"
   },
