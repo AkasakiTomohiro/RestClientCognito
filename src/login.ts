@@ -32,7 +32,7 @@ export function CognitoLogin(): Promise<{ token: string }> {
 
     cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess(result) {
-        console.log(result.getAccessToken().getJwtToken());
+        console.log('Login Success.');
         resolve({ token: result.getAccessToken().getJwtToken() });
       },
       onFailure(err) {
