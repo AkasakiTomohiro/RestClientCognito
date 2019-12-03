@@ -1,7 +1,4 @@
-import { isNumber } from 'util';
-
 export class Command {
-  public help: boolean = false;
   public port: number = 3000;
 }
 
@@ -11,12 +8,17 @@ export function CommandCheck(): Command {
     switch (process.argv[i]) {
       case '-p':
       case '--port':
-        command.port = Number(process.argv[i + 1]);
+        const port = Number(process.argv[i + 1]);
+        if (!isNaN(port) && Number.isInteger(port)) {
+          command.port = port;
+        } else {
+          console.error("'-p' must be an integer");
+          process.exit(1);
+        }
         break;
-
       case 'help':
       case '-h':
-        command.help = true;
+        process.exit(0);
         break;
     }
   }

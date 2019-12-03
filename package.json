@@ -9,7 +9,7 @@
     "CodeStyleCheck:fix": "gts fix",
     "build": "webpack",
     "prod": "ENV=production webpack",
-    "start": "ts-node ./src/index.ts -p 4000 -h",
+    "start": "ts-node ./src/index.ts -p 4000",
     "tsc": "tsc -p ./src/tsconfig.json"
   },
   "repository": {
@@ -26,10 +26,14 @@
     "url": "https://github.com/AkasakiTomohiro/RestClientCognito/issues"
   },
   "homepage": "https://github.com/AkasakiTomohiro/RestClientCognito#readme",
-  "dependencies": {},
+  "dependencies": {
+    "amazon-cognito-identity-js": "^3.2.0",
+    "node-fetch": "^2.6.0"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
+    "@types/node-fetch": "^2.5.4",
     "dotenv": "^8.2.0",
     "gts": "^1.1.2",
     "husky": "^3.1.0",
