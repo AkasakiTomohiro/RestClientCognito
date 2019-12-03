@@ -2,19 +2,6 @@ import { CognitoUserPool, AuthenticationDetails, CognitoUser } from 'amazon-cogn
 
 export function CognitoLogin(): Promise<{ token: string }> {
   return new Promise<{ token: string }>((resolve, rejects) => {
-    if (process.env.RCC_USER_POOL_ID === undefined) {
-      rejects('process.env.RCC_USER_POOL_ID is undefined\r\n');
-    }
-    if (process.env.RCC_CLIENT_ID === undefined) {
-      rejects('process.env.RCC_CLIENT_ID is undefined\r\n');
-    }
-    if (process.env.RCC_USER_NAME === undefined) {
-      rejects('process.env.RCC_USER_NAME is undefined\r\n');
-    }
-    if (process.env.RCC_PASSWORD === undefined) {
-      rejects('process.env.RCC_PASSWORD is undefined\r\n');
-    }
-
     const userPool = new CognitoUserPool({
       UserPoolId: process.env.RCC_USER_POOL_ID as string,
       ClientId: process.env.RCC_CLIENT_ID as string
