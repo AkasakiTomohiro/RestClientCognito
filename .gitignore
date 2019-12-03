@@ -72,3 +72,4 @@ typings/
 # Project
 package-lock.json
 *id_rsa*
+tsconfig.tsbuildinfo

@@ -3,15 +3,17 @@
     "target": "es2019",
     "module": "commonjs",
     "baseUrl": "./",
-    "outDir": "./lib",
-    "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "composite": true,
     "types": [
+      "jest",
       "node"
     ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "outDir": "../lib",
     "newLine": "lf",
     "removeComments": false,
     "forceConsistentCasingInFileNames": true
@@ -20,7 +22,6 @@
     "**/*.spec.ts"
   ],
   "include": [
-    "src",
-    "webpack.config.js"
+    "*"
   ]
 }
