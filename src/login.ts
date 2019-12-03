@@ -2,6 +2,19 @@ import { CognitoUserPool, AuthenticationDetails, CognitoUser } from 'amazon-cogn
 
 export function CognitoLogin(): Promise<{ token: string }> {
   return new Promise<{ token: string }>((resolve, rejects) => {
+    if (process.env.USER_POOL_ID === undefined) {
+      rejects('process.env.USER_POOL_ID is undefined\r\n');
+    }
+    if (process.env.CLIENT_ID === undefined) {
+      rejects('process.env.CLIENT_ID is undefined\r\n');
+    }
+    if (process.env.USER_NAME === undefined) {
+      rejects('process.env.USER_NAME is undefined\r\n');
+    }
+    if (process.env.PASSWORD === undefined) {
+      rejects('process.env.PASSWORD is undefined\r\n');
+    }
+
     const userPool = new CognitoUserPool({
       UserPoolId: process.env.USER_POOL_ID as string,
       ClientId: process.env.CLIENT_ID as string
@@ -24,7 +37,7 @@ export function CognitoLogin(): Promise<{ token: string }> {
       },
       onFailure(err) {
         console.error(err);
-        rejects('Login Failed');
+        rejects('Login Failed\r\n');
       },
       newPasswordRequired(userAttributes, requiredAttributes) {
         cognitoUser.completeNewPasswordChallenge(authenticationDetails.getPassword(), userAttributes, this);
