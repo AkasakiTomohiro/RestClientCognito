@@ -1,16 +1,13 @@
 {
   "name": "rest-client-cognito",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "LintStaged": "lint-staged",
     "CodeStyleCheck": "gts check",
     "CodeStyleCheck:fix": "gts fix",
-    "build": "webpack",
-    "prod": "ENV=production webpack",
     "start": "ts-node ./src/index.ts -p 4000",
-    "tsc": "tsc -p ./src/tsconfig.json"
+    "build": "tsc -p ./src/tsconfig.json"
   },
   "repository": {
     "type": "git",
