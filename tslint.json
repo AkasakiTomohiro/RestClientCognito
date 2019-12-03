@@ -1,0 +1,17 @@
+{
+  "extends": "gts/tslint.json",
+  "linterOptions": {
+    "exclude": ["**/*.json"]
+  },
+  "rules": {
+    "no-any": false,
+    "interface-name": [true, "always-prefix"],
+    "ban-ts-ignore": false,
+    "member-access": [true, "check-parameter-property"],
+    "no-inferrable-types": false,
+    "switch-default": false,
+    "curly": true,
+    "triple-equals": true,
+    "array-type": [true, "array"]
+  }
+}

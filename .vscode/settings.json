@@ -1,0 +1,63 @@
+{
+  "tslint.autoFixOnSave": true,
+  "tslint.packageManager": "npm",
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "none",
+  "editor.rulers": [
+    120
+  ],
+  "cSpell.words": [
+    "cognito"
+  ],
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "rest-client.previewOption": "exchange",
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "hostName": "localhost",
+      "baseUri": "",
+      "http": "http",
+      "port": "8080"
+    }
+  },
+  "yaml.schemas": {
+    "https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json": [
+      "*.cf.yaml",
+      "*.cf.yml",
+      "cloud*formation/*.yaml",
+      "cloud*formation/*.yml",
+      "cloudformation.yaml"
+    ]
+  },
+  "yaml.customTags": [
+    "!Ref",
+    "!Sub scalar",
+    "!Sub sequence",
+    "!Join sequence",
+    "!FindInMap sequence",
+    "!GetAtt scalar",
+    "!GetAtt sequence",
+    "!Base64 mapping",
+    "!GetAZs",
+    "!Select scalar",
+    "!Select sequence",
+    "!Split sequence",
+    "!ImportValue",
+    "!Condition",
+    "!Equals sequence",
+    "!And",
+    "!If",
+    "!Not",
+    "!Or"
+  ],
+  "jest.showCoverageOnLoad": true,
+  "jest.enableCodeLens": true,
+  "jest.pathToConfig": "./jest.config.js",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "**/.vagrant": true,
+    "**/cdk.out": true
+  }
+}

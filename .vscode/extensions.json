@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "humao.rest-client",
+    "streetsidesoftware.code-spell-checker",
+    "fabiospampinato.vscode-todo-plus",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "eg2.tslint"
+  ]
+}
