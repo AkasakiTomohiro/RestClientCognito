@@ -1,0 +1,11 @@
+@rcc-port = 3000
+
+###
+
+# @name login
+
+GET http://localhost:{{rcc-port}}/login
+
+@authToken = {{login.response.body.token}}
+
+###
