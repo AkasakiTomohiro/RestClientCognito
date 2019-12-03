@@ -9,7 +9,7 @@
     "CodeStyleCheck:fix": "gts fix",
     "build": "webpack",
     "prod": "ENV=production webpack",
-    "start": "ts-node ./src/index.ts",
+    "start": "ts-node ./src/index.ts -p 4000 -h",
     "tsc": "tsc -p ./src/tsconfig.json"
   },
   "repository": {
