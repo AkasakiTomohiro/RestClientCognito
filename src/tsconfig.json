@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "baseUrl": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "composite": true,
+    "types": [
+      "jest",
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "outDir": "../lib",
+    "newLine": "lf",
+    "removeComments": false,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": [
+    "**/*.spec.ts"
+  ]
+}
