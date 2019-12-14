@@ -2,12 +2,6 @@
 
 このツールはCognitoからアクセストークンを取得するための認証用Webサーバーを起動するものになっています。
 
-## 開発背景
-
-私はVisual Studio Code Extensionの[REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)を用いてWebAPIの検証を行っていました。  
-しかし、このExtensionだけではCognitoのアクセストークンを取得することができません。  
-なので、Cognitoの認証サーバーをnodeを用いて簡易にアクセストークンを取得できれば検証作業が簡易になると思いこのツールを作成しました。
-
 ## 準備
 
 準備としてプロジェクトフォルダ直下に`.env`ファイルを作成してください。
