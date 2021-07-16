@@ -1,7 +1,7 @@
 import { CognitoUserPool, AuthenticationDetails, CognitoUser } from 'amazon-cognito-identity-js';
 
-export function CognitoLogin(): Promise<{ token: string }> {
-  return new Promise<{ token: string }>((resolve, rejects) => {
+export function CognitoLogin(): Promise<{ token: string; idToken: string }> {
+  return new Promise<{ token: string; idToken: string }>((resolve, rejects) => {
     const userPool = new CognitoUserPool({
       UserPoolId: process.env.RCC_USER_POOL_ID as string,
       ClientId: process.env.RCC_CLIENT_ID as string
@@ -20,7 +20,10 @@ export function CognitoLogin(): Promise<{ token: string }> {
     cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess(result) {
         console.log('Login Success.');
-        resolve({ token: result.getAccessToken().getJwtToken() });
+        resolve({
+          token: result.getAccessToken().getJwtToken(),
+          idToken: result.getIdToken().getJwtToken()
+        });
       },
       onFailure(err) {
         console.error(err);
